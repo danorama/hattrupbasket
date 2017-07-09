@@ -4,20 +4,20 @@
 \alias{calc_twoPpct}
 \title{2-Point Field Goal Percentage (2P%)}
 \usage{
-calc_twoPpct(twoP, twoPA, times100 = T)
+calc_twoPpct(twoP, twoPA, pct = TRUE)
 }
 \arguments{
 \item{twoP}{total number of succesfull 2-pointers}
 
 \item{twoPA}{number of 2-point attempts}
 
-\item{times100}{TRUE for percentage of 100, FALSE for fraction of 1}
+\item{pct}{TRUE for percentage of 100, FALSE for fraction of 1}
 }
 \value{
 2P% ( between 0 and 1 )
 }
 \description{
-Calculate 2-point-percentage (2P%) using 
+Calculate 2-point-percentage (2P%) using the number of
 sucessfull 2-pointer and total 2-point attempts
 (2P/2PA)*100
 }
