@@ -1,0 +1,11 @@
+Package: hattrupbasket
+Title: calculate advanced basketball stats
+Version: 0.0.0.1
+Authors@R: person("Dominik", "Hattrup", email = "dominik@hattrup.eu", role = c("aut", "cre"))
+Description: hattrupbasket provides functions to calculate advanced basketball stats
+Depends: R (>= 3.2.3)
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Imports:
+RoxygenNote: 6.0.1
