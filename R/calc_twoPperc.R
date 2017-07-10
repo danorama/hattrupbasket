@@ -9,12 +9,12 @@
 #' @param pct TRUE for percentage of 100, FALSE for fraction of 1 
 #' @return 2P% ( between 0 and 1 )
 #' @export
-calc_twoPpct <- function(twoP,twoPA,pct=TRUE){
+twoPpct <- function(twoP,twoPA,pct=TRUE){
   if(perc==TRUE){
     twoPpct <- (twoP/twoPA)*100
   }
   else {
     twoPpct <- (twoP/twoPA)
   }
-  twoPpct
+  return(twoPpct)
 }
