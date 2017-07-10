@@ -101,20 +101,6 @@ pctFG <- function(fg,fga,pct=TRUE,digits=1){
   }
 }
 
-  
-  
-  
-  
-    if(pct==TRUE){
-    FGpct <- (FG/FGA)*100
-  }
-  else {
-    FGpct <- (FG/FGA)
-  }
-  FGpct <- format(FGpct, digit=digits)
-  return(FGpct)
-}
-
 #' effective Field Goal Percentage (eFG%) -- eFGpct()
 #'
 #' Calculate effective/adjusted field-goal-percentage (FGP%) using the number of 
