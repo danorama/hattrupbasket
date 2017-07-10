@@ -27,7 +27,7 @@ pct2p <- function(p2,p2a,pct=TRUE,digits=1){
   pct2p <- (p2/p2a)
   # format
   if(pct==TRUE){pct2p <- pct2p*100}
-  pct2p <- format(pct2p, digit=digits)
+  pct2p <- format(pct2p, digits=digits)
   # return
   if (p2a == 0) {
     return(pct2p <- NA)
@@ -60,7 +60,7 @@ pct3p <- function(p3,p3a,pct=TRUE,digits=1){
   pct3p <- (p3/p3a)
   # format
   if(pct==TRUE){pct3p <- pct3p*100}
-  pct3p <- format(pct3p, digit=digits)
+  pct3p <- format(pct3p, digits=digits)
   # return
   if (p3a == 0) {
     return(pct3p <- NA)
@@ -92,7 +92,7 @@ pctFG <- function(fg,fga,pct=TRUE,digits=1){
   pctFG <- (fg/fga)
   # format
   if(pct==TRUE){pctFG <- pctFG*100}
-  pctFG <- format(pctFG, digit=digits)
+  pctFG <- format(pctFG, digits=digits)
   # return
   if (fga == 0) {
     return(pctFG <- NA)
