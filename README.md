@@ -9,6 +9,7 @@ However, if You would like to play around with it, try the following:
 <pre>
   install.packages("devtools")
   install_github('hattrupbasket','danorama')
+  lsf.str("package:hattrupbasket")
 </pre>
 
 

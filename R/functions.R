@@ -26,7 +26,7 @@ pct2p <- function(p2,p2a,pct=TRUE,digits=1){
   # calc
   pct2p <- (p2/p2a)
   # format
-  if(perc==TRUE){pct2p <- pct2p*100}
+  if(pct==TRUE){pct2p <- pct2p*100}
   pct2p <- format(pct2p, digit=digits)
   # return
   if (p2a == 0) {
@@ -59,7 +59,7 @@ pct3p <- function(p3,p3a,pct=TRUE,digits=1){
   # calc
   pct3p <- (p3/p3a)
   # format
-  if(perc==TRUE){pct3p <- pct3p*100}
+  if(pct==TRUE){pct3p <- pct3p*100}
   pct3p <- format(pct3p, digit=digits)
   # return
   if (p3a == 0) {
