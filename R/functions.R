@@ -91,7 +91,7 @@ pctFG <- function(fg,fga,pct=TRUE,digits=1){
   # calc
   pctFG <- (fg/fga)
   # format
-  if(perc==TRUE){pctFG <- pctFG*100}
+  if(pct==TRUE){pctFG <- pctFG*100}
   pctFG <- format(pctFG, digit=digits)
   # return
   if (fga == 0) {
