@@ -28,7 +28,7 @@ pct2p <- function(p2,p2a,pct=TRUE){
   if(pct==TRUE){pct2p <- pct2p*100}
   # return
   if (p2a == 0) {
-    return(pct2p <- NA)
+    return(NA)
   } else {
     return(pct2p)  
   }

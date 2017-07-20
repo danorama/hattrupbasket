@@ -9,7 +9,7 @@ However, if You would like to play around with it, try the following:
 <pre>
   # load [R] package --------------------------
   install.packages("devtools")
-  install_github('hattrupbasket','danorama')
+  install_github('danorama/hattrupbasket')
   library(hattrupbasket)
   
   # list avaiable functions -------------------
