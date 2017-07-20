@@ -30,7 +30,7 @@ pct2p <- function(p2,p2a,pct=TRUE){
   if (p2a == 0) {
     return(NA)
   } else {
-    return(pct2p)  
+    return(pct2p)
   }
 }
 
@@ -61,7 +61,7 @@ pct3p <- function(p3,p3a,pct=TRUE){
   if (p3a == 0) {
     return(NA)
   } else {
-    return(pct3p)  
+    return(pct3p)
   }
 }
 
@@ -119,7 +119,7 @@ eFGpct <- function(fg,fga,p3,pct=TRUE){
   if (p3 > fga) stop("'p3' must be <= fga")
   if (fga == 0) warning("field-goal-attempts equals zero")
   # calc
-  eFGpct <- ((fg+0.5*p3/fga)
+  eFGpct <- ((fg+0.5*p3/fga))
   # format
   if(pct==TRUE){eFGpct <- eFGpct*100}
   # return
