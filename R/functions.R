@@ -76,7 +76,7 @@ pct3p <- function(p3,p3a,pct=TRUE){
 #' @param pct TRUE for percentage of 100, FALSE for fraction of 1 
 #' @return 3P\%
 #' @export
-FGpct <- function(fg,fga,pct=TRUE,digits=1){
+FGpct <- function(fg,fga,pct=TRUE){
   # check arguments
   if (missing(fg) == TRUE) stop("missing argument: 'fg' (number of field-goals made)")
   if (missing(fga) == TRUE) stop("missing argument: 'fga' (number of field-goal-attempts)")
@@ -88,10 +88,9 @@ FGpct <- function(fg,fga,pct=TRUE,digits=1){
   FGpct <- (fg/fga)
   # format
   if(pct==TRUE){pctFG <- FGpct*100}
-  FGpct <- format(FGpct, digits=digits)
   # return
   if (fga == 0) {
-    return(FGpct <- NA)
+    return(NA)
   } else {
     return(FGpct)  
   }
@@ -109,7 +108,7 @@ FGpct <- function(fg,fga,pct=TRUE,digits=1){
 #' @param pct TRUE for percentage of 100, FALSE for fraction of 1 
 #' @return 3P\%
 #' @export
-eFGpct <- function(fg,fga,p3,pct=TRUE,digits=1){
+eFGpct <- function(fg,fga,p3,pct=TRUE){
   # check arguments
   if (missing(fg) == TRUE) stop("missing argument: 'fg' (number of field-goals made)")
   if (missing(fga) == TRUE) stop("missing argument: 'fga' (number of field-goal-attempts)")
@@ -123,10 +122,9 @@ eFGpct <- function(fg,fga,p3,pct=TRUE,digits=1){
   eFGpct <- ((fg+0.5*p3/fga)
   # format
   if(pct==TRUE){eFGpct <- eFGpct*100}
-  eFGpct <- format(eFGpct, digits=digits)
   # return
   if (fga == 0) {
-    return(eFGpct <- NA)
+    return(NA)
   } else {
     return(eFGpct)  
   }
@@ -168,15 +166,13 @@ ASTpct <- function(AST,
                    TmMP,
                    TmFG,
                    FG,
-                   pct=TRUE,
-                   digits=1){
+                   pct=TRUE){
   if(pct==TRUE){
     ASTpct <- (AST/(((MP/(TmMP/5))*TmFG)-FG))*100
   }
   else {
     ASTpct <- (AST/(((MP/(TmMP/5))*TmFG)-FG))
   }
-  ASTpct <- format(ASTpct, digit=digits)
   return(ASTpct)
 }
 
