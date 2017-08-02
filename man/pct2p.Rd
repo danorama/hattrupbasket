@@ -2,9 +2,9 @@
 % Please edit documentation in R/functions.R
 \name{pct2p}
 \alias{pct2p}
-\title{2-Point Field Goal Percentage (2P%) -- calc2Ppct()}
+\title{2-Point Field Goal Percentage (2P\%) -- calc2Ppct()}
 \usage{
-pct2p(p2, p2a, pct = TRUE, digits = 1)
+pct2p(p2, p2a, pct = TRUE)
 }
 \arguments{
 \item{p2}{total number of succesfull 2-pointers}
@@ -12,14 +12,12 @@ pct2p(p2, p2a, pct = TRUE, digits = 1)
 \item{p2a}{number of 2-point attempts}
 
 \item{pct}{TRUE for percentage of 100, FALSE for fraction of 1}
-
-\item{digits}{number of digits}
 }
 \value{
-2P% ( between 0 and 1 )
+2P\% ( between 0 and 1 )
 }
 \description{
-Calculate 2-point-percentage (2P%) using the number of
+Calculate 2-point-percentage (2P\%) using the number of
 sucessfull 2-pointer and total 2-point attempts
 (2P/2PA)*100
 }

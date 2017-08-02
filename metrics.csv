@@ -1,0 +1,7 @@
+metric,abbr,identifier,formula,description
+"2-Point Field Goals","2P","p2","",""
+"2-Point Field Goal Percentage","2P%",p2pct,"2P / 2PA",""
+"2-Point Field Goal Attempts","2PA","pa2","",""
+"3-Point Field Goals","3P",p3,"",""
+"3-Point Field Goal Perentage","3P%",p3pct,"3P / 3PA"
+"3-Point Field Goal Attempts","3PA","p3a","",""
