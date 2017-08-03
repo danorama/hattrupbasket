@@ -4,8 +4,8 @@
 \alias{playerstats}
 \title{player stats -- playerstats()}
 \usage{
-playerstats(team = all, player = all, season = current,
-  competition = all, type = rp)
+playerstats(team = all, player = all, season, competition = all,
+  type = rp)
 }
 \arguments{
 \item{team}{team}
