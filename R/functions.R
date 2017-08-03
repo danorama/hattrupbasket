@@ -44,7 +44,7 @@ helloworld <- function(){
 #' @return table
 #' @export
 #' @get /playerstats
-playerstats <- function(team=all, player=all, season=current, competition=all, type=rp){
+playerstats <- function(team=all, player=all, season, competition=all, type=rp){
   SEA <- season
   COM <- competition
   PLA <- player
@@ -53,7 +53,7 @@ playerstats <- function(team=all, player=all, season=current, competition=all, t
   #if (missing(player) == TRUE) stop("missing argument: '' (number of 2-pointers made)")
   # 
   #?subset
-  if (SEA == "current"){SEA="2016-2017"} else if (SEA == "all"){SEA=all.seasons}
+  if (SEA == ""){SEA="2016-2017"} else if (SEA == "all"){SEA=all.seasons}
   if (TEA == "all"){TEA=all.teams}
   if (player == "all"){player=all.players}
   tab <- subset(data.player.stats , team == TEA, season == SEA, player == PLA, select = c(season, team, name, pos, G, MP))
