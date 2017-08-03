@@ -3,6 +3,66 @@
 # functions
 #################################################
 
+install.packages('gsheet')
+library(gsheet)
+player.stats <- gsheet2tbl('https://docs.google.com/spreadsheets/d/1FaTwspItXw-xLlz4ybmDd157thSA9Mg5jQI1FKr5rGc/edit#gid=466906933')
+
+
+all.seasons <- unique(player.stats$season)
+all.players <- unique(player.stats$name)
+
+
+
+#' @get /helloworld
+helloworld <- function(){
+  hw <- "hello world"
+  return(hw)
+}
+
+#' @get /version
+version <- function(){
+  version <- "version 0.0.0.1"
+  return(hw)
+}
+
+#' @get /about
+helloworld <- function(){
+  about <- "hattrupbasket is a lightweight api for advanced basketball statistics"
+  return(about)
+}
+
+
+#' player stats -- playerstats()
+#'
+#' get player stats for specific season and competition
+#'
+#' @param team team
+#' @param player player
+#' @param season season
+#' @param competition competition
+#' @param type p for playoffs, r for regular season, rp for both
+#' @return table
+#' @export
+#' @get /playerstats
+playerstats <- function(team=all, player=all, season=current, competition=all, type=rp){
+  # check arguments
+  #if (missing(player) == TRUE) stop("missing argument: '' (number of 2-pointers made)")
+  # 
+  ?subset
+  if (season == "current"){season="2016-2017"} else if (season == "all"){season=all.seasons}
+  if (team == "all"){team=all.teams}
+  if (player == "all"){team=all.players}
+  tab <- subset(data.player.stats , team == team, season == season, select = c(season, team, name, pos, G, MP))
+  return(tab)
+}
+
+
+
+
+
+
+
+
 #' 2-Point Field Goal Percentage (2P\%) -- calc2Ppct()
 #'
 #' Calculate 2-point-percentage (2P\%) using the number of
@@ -14,6 +74,7 @@
 #' @param pct TRUE for percentage of 100, FALSE for fraction of 1 
 #' @return 2P\% ( between 0 and 1 )
 #' @export
+#' @get /twopointpct
 pct2p <- function(p2,p2a,pct=TRUE){
   # check arguments
   if (missing(p2) == TRUE) stop("missing argument: 'p2' (number of 2-pointers made)")
@@ -28,7 +89,7 @@ pct2p <- function(p2,p2a,pct=TRUE){
   if(pct==TRUE){pct2p <- pct2p*100}
   # return
   if (p2a == 0) {
-    return(NA)
+    return(1)
   } else {
     return(pct2p)
   }
