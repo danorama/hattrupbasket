@@ -3,7 +3,7 @@
 # functions
 #################################################
 
-install.packages('gsheet')
+#install.packages('gsheet')
 library(gsheet)
 player.stats <- gsheet2tbl('https://docs.google.com/spreadsheets/d/1FaTwspItXw-xLlz4ybmDd157thSA9Mg5jQI1FKr5rGc/edit#gid=466906933')
 
@@ -45,14 +45,18 @@ helloworld <- function(){
 #' @export
 #' @get /playerstats
 playerstats <- function(team=all, player=all, season=current, competition=all, type=rp){
+  SEA <- season
+  COM <- competition
+  PLA <- player
+  TEA <- team
   # check arguments
   #if (missing(player) == TRUE) stop("missing argument: '' (number of 2-pointers made)")
   # 
-  ?subset
-  if (season == "current"){season="2016-2017"} else if (season == "all"){season=all.seasons}
-  if (team == "all"){team=all.teams}
-  if (player == "all"){team=all.players}
-  tab <- subset(data.player.stats , team == team, season == season, select = c(season, team, name, pos, G, MP))
+  #?subset
+  if (SEA == "current"){SEA="2016-2017"} else if (SEA == "all"){SEA=all.seasons}
+  if (TEA == "all"){TEA=all.teams}
+  if (player == "all"){player=all.players}
+  tab <- subset(data.player.stats , team == TEA, season == SEA, player == PLA, select = c(season, team, name, pos, G, MP))
   return(tab)
 }
 
